@@ -4,7 +4,7 @@
 
 - have an npm version that supports workspaces (>=7)
 - run `npm i` in the root dir
-- in `apps/react-native-app` run `npm run anrdoid`
+- in `apps/react-native-app` run `npm run android`
 - load app in the expo client
 - get error:
 
