@@ -2,10 +2,9 @@
 
 ## with npm workspaces
 
-- have an npm version that supports workspaces (>=7)
-- run `npm i` in the root dir
-- in `apps/react-native-app` run `npm run anrdoid`
-- load app in the expo client
+- have pnpm installed
+- run `pnpm i` in the root dir
+- in `apps/react-native-app` run `pnpm android`
 - get error:
 
 ```bash
@@ -24,15 +23,15 @@
 › Press ? │ show all commands
 
 Logs for your project will appear below. Press Ctrl+C to exit.
-Error: Cannot resolve entry file: The `main` field defined in your `package.json` points to a non-existent path.
-    at getEntryPointWithExtensions (/Users/carlos/.nvm/versions/node/v16.13.1/pnpm-global/5/node_modules/.pnpm/@expo+config@6.0.14/node_modules/@expo/config/src/paths/paths.ts:83:17)
-    at getEntryPoint (/Users/carlos/.nvm/versions/node/v16.13.1/pnpm-global/5/node_modules/.pnpm/@expo+config@6.0.14/node_modules/@expo/config/src/paths/paths.ts:42:10)
-    at resolveEntryPoint (/Users/carlos/.nvm/versions/node/v16.13.1/pnpm-global/5/node_modules/.pnpm/xdl@59.2.22/node_modules/xdl/src/tools/resolveEntryPoint.ts:21:17)
-    at getManifestResponseAsync (/Users/carlos/.nvm/versions/node/v16.13.1/pnpm-global/5/node_modules/.pnpm/xdl@59.2.22/node_modules/xdl/src/start/ManifestHandler.ts:246:20)
-    at getManifestResponseFromHeadersAsync (/Users/carlos/.nvm/versions/node/v16.13.1/pnpm-global/5/node_modules/.pnpm/xdl@59.2.22/node_modules/xdl/src/start/ManifestHandler.ts:190:10)
-    at /Users/carlos/.nvm/versions/node/v16.13.1/pnpm-global/5/node_modules/.pnpm/xdl@59.2.22/node_modules/xdl/src/start/ManifestHandler.ts:151:55
-    at call (/Users/carlos/.nvm/versions/node/v16.13.1/pnpm-global/5/node_modules/.pnpm/connect@3.7.0/node_modules/connect/index.js:239:7)
-    at next (/Users/carlos/.nvm/versions/node/v16.13.1/pnpm-global/5/node_modules/.pnpm/connect@3.7.0/node_modules/connect/index.js:183:5)
-    at Function.handle (/Users/carlos/.nvm/versions/node/v16.13.1/pnpm-global/5/node_modules/.pnpm/connect@3.7.0/node_modules/connect/index.js:186:3)
-    at handle (/Users/carlos/Dev/test/expo-monorepo-issue/node_modules/connect/index.js:91:14)
+Error: EISDIR: illegal operation on a directory, read
+    at Object.readSync (node:fs:723:3)
+    at tryReadSync (node:fs:433:20)
+    at Object.readFileSync (node:fs:479:19)
+    at UnableToResolveError.buildCodeFrameMessage (/Users/carlos/Dev/test/expo-monorepo-issue/node_modules/.pnpm/metro@0.64.0/node_modules/metro/src/node-haste/DependencyGraph/ModuleResolution.js:347:17)
+    at new UnableToResolveError (/Users/carlos/Dev/test/expo-monorepo-issue/node_modules/.pnpm/metro@0.64.0/node_modules/metro/src/node-haste/DependencyGraph/ModuleResolution.js:333:35)
+    at ModuleResolver.resolveDependency (/Users/carlos/Dev/test/expo-monorepo-issue/node_modules/.pnpm/metro@0.64.0/node_modules/metro/src/node-haste/DependencyGraph/ModuleResolution.js:211:15)
+    at DependencyGraph.resolveDependency (/Users/carlos/Dev/test/expo-monorepo-issue/node_modules/.pnpm/metro@0.64.0/node_modules/metro/src/node-haste/DependencyGraph.js:413:43)
+    at /Users/carlos/Dev/test/expo-monorepo-issue/node_modules/.pnpm/metro@0.64.0/node_modules/metro/src/lib/transformHelpers.js:317:42
+    at /Users/carlos/Dev/test/expo-monorepo-issue/node_modules/.pnpm/metro@0.64.0/node_modules/metro/src/Server.js:1471:14
+    at Generator.next (<anonymous>)
 ```

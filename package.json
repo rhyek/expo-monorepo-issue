@@ -1,6 +1,3 @@
 {
-  "name": "expo-monorepo-issue",
-  "workspaces": [
-    "apps/react-native-app"
-  ]
+  "name": "expo-monorepo-issue"
 }
