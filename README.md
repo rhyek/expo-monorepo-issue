@@ -1,6 +1,6 @@
 # expo-monorepo-issue
 
-## with npm workspaces
+## with pnpm
 
 - have pnpm installed
 - run `pnpm i` in the root dir
